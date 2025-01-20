@@ -44,6 +44,17 @@
       "options": {
         "targetName": "test"
       }
+    },
+    {
+      "plugin": "@nx/remix/plugin",
+      "options": {
+        "startTargetName": "start",
+        "buildTargetName": "build",
+        "devTargetName": "dev",
+        "typecheckTargetName": "typecheck",
+        "serveStaticTargetName": "serve-static",
+        "staticServeTargetName": "static-serve"
+      }
     }
   ],
   "targetDefaults": {
