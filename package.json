@@ -2,7 +2,10 @@
   "name": "@yoyo-nx-rr7/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "docs": "adr new",
+    "postdocs": "adr-log -i -d doc/adr"
+  },
   "private": true,
   "dependencies": {
     "@remix-run/node": "^2.14.0",
