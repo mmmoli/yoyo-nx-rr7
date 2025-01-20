@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "web-remix",
+  "name": "web",
   "scripts": {},
   "type": "module",
   "engines": {
