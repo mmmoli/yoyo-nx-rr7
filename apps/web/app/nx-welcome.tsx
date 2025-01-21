@@ -1,3 +1,6 @@
+import { Trans } from '@lingui/react/macro';
+import { Link } from 'react-router';
+
 /*
  * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  This is a starter component and can be deleted.
@@ -430,9 +433,14 @@ export function NxWelcome({ title }: { title: string }) {
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
+            <Link to="?lng=fr" reloadDocument>
+              French
+            </Link>
+            <Link to="?lng=en" reloadDocument>
+              English
+            </Link>
             <h1>
-              <span> Hello there, </span>
-              Welcome {title} 👋
+              <Trans>Hello there, Welcome {title} 👋</Trans>
             </h1>
           </div>
 

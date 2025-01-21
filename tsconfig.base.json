@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@repo/lingui.config": ["./lingui.config"],
+      "@repo/service-i18n": ["libs/service-i18n/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

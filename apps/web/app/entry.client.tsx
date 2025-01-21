@@ -4,15 +4,28 @@
  * For more information, see https://remix.run/file-conventions/entry.client
  */
 
+import { i18n } from '@lingui/core';
+import { detect, fromHtmlTag } from '@lingui/detect-locale';
+import { I18nProvider } from '@lingui/react';
+import { loadCatalog } from './shared/i18n/lingui';
 import { HydratedRouter } from 'react-router/dom';
 import { startTransition, StrictMode } from 'react';
 import { hydrateRoot } from 'react-dom/client';
 
-startTransition(() => {
-  hydrateRoot(
-    document,
-    <StrictMode>
-      <HydratedRouter />
-    </StrictMode>
-  );
-});
+async function main() {
+  const locale = detect(fromHtmlTag('lang')) || 'en';
+  await loadCatalog(locale);
+
+  startTransition(() => {
+    hydrateRoot(
+      document,
+      <StrictMode>
+        <I18nProvider i18n={i18n}>
+          <HydratedRouter />
+        </I18nProvider>
+      </StrictMode>
+    );
+  });
+}
+
+main();

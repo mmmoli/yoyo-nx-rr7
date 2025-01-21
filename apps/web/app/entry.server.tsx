@@ -1,3 +1,8 @@
+import { i18n } from '@lingui/core';
+import { I18nProvider } from '@lingui/react';
+import { linguiServer } from './shared/i18n/lingui.server';
+import { loadCatalog } from './shared/i18n/lingui';
+
 /**
  * By default, Remix will handle generating the HTTP Response for you.
  * You are free to delete this file if you'd like to, but if you ever want it revealed again, you can run `npx remix reveal` ✨
@@ -89,20 +94,25 @@ function handleBotRequest(
   });
 }
 
-function handleBrowserRequest(
+async function handleBrowserRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
   reactRouterContext: EntryContext
 ) {
+  const locale = await linguiServer.getLocale(request);
+  await loadCatalog(locale);
+
   return new Promise((resolve, reject) => {
     let shellRendered = false;
     const { pipe, abort } = renderToPipeableStream(
-      <ServerRouter
-        context={reactRouterContext}
-        url={request.url}
-        abortDelay={ABORT_DELAY}
-      />,
+      <I18nProvider i18n={i18n}>
+        <ServerRouter
+          context={reactRouterContext}
+          url={request.url}
+          abortDelay={ABORT_DELAY}
+        />
+      </I18nProvider>,
       {
         onShellReady() {
           shellRendered = true;

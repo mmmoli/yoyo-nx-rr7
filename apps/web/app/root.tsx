@@ -1,5 +1,15 @@
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
+import {
+  data,
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  useLoaderData,
+} from 'react-router';
 import type { MetaFunction, LinksFunction } from 'react-router';
+import type { Route } from '../.react-router/types/app/+types/nx-welcome';
+import { linguiServer, localeCookie } from './shared/i18n/lingui.server';
 
 export const meta: MetaFunction = () => [
   {
@@ -20,9 +30,24 @@ export const links: LinksFunction = () => [
   },
 ];
 
+export async function loader({ request }: Route.LoaderArgs) {
+  const locale = await linguiServer.getLocale(request);
+
+  const headers = new Headers();
+  headers.append('Set-Cookie', await localeCookie.serialize(locale));
+
+  return data(
+    {
+      locale,
+    },
+    { headers }
+  );
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  const { locale } = useLoaderData<typeof loader>();
   return (
-    <html lang="en">
+    <html lang={locale ?? 'en'}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
