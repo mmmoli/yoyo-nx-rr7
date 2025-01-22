@@ -5,5 +5,3 @@ export function ModuleProjectsUi() {
     </div>
   );
 }
-
-export default ModuleProjectsUi;
