@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@dotenvx/dotenvx": "^1.33.0",
     "@lingui/core": "^5.1.2",
     "@lingui/detect-locale": "^5.1.2",
     "@lingui/macro": "^5.1.2",

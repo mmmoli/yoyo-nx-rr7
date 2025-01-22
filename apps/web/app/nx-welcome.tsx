@@ -4,6 +4,13 @@ import { Link } from 'react-router';
 import { Button } from '~/components/ui/button';
 import { ProjectDetailsWidget } from '@repo/module-projects-ui';
 import { getLanguages } from '@repo/service-i18n/lingui';
+import { envs } from './shared/config/envs';
+
+export async function loader() {
+  return {
+    msg: envs.HELLO,
+  };
+}
 
 export function NxWelcome({ title }: { title: string }) {
   return (
