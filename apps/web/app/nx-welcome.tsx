@@ -13,14 +13,18 @@ export function NxWelcome({ title }: { title: string }) {
             Please wait
           </Button>
 
-          <Button asChild>
-            <Link to="?lng=fr" reloadDocument>
-              French
-            </Link>
-          </Button>
-          <Link to="?lng=en" reloadDocument>
-            English
-          </Link>
+          <div className="flex">
+            <Button asChild variant="link">
+              <Link to="?lng=fr" reloadDocument>
+                French
+              </Link>
+            </Button>
+            <Button asChild variant="link">
+              <Link to="?lng=en" reloadDocument>
+                English
+              </Link>
+            </Button>
+          </div>
           <h1>
             <Trans>Hello there, Welcome {title} 👋</Trans>
           </h1>
