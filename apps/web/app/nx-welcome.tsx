@@ -1,19 +1,26 @@
 import { Trans } from '@lingui/react/macro';
+import { Loader2 } from 'lucide-react';
 import { Link } from 'react-router';
+import { Button } from '~/components/ui/button';
 
 export function NxWelcome({ title }: { title: string }) {
   return (
     <div className="bg-red-200">
       <div className="container">
         <div id="welcome">
-          <Link to="?lng=fr" reloadDocument>
-            French
-          </Link>
+          <Button disabled>
+            <Loader2 className="animate-spin" />
+            Please wait
+          </Button>
 
+          <Button asChild>
+            <Link to="?lng=fr" reloadDocument>
+              French
+            </Link>
+          </Button>
           <Link to="?lng=en" reloadDocument>
             English
           </Link>
-
           <h1>
             <Trans>Hello there, Welcome {title} 👋</Trans>
           </h1>
