@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
+@layer base {
+  html,
+  body {
+    @apply overscroll-none;
+    pointer-events: auto !important;
+  }
+
+  :root {
+    /* Palette */
+    --black: 0 0% 0%;
+    --white: 0 0% 100%;
+    --yellow: 47 100% 50%;
+    --pale: 60 6% 94%;
+    --red: 11 80% 60%;
+    --blue: 223 82% 53%;
+
+    /* Named vars */
+    --background: var(--white);
+    --foreground: var(--black);
+
+    --muted: var(--pale);
+    --muted-foreground: var(--foreground);
+
+    --popover: var(--pale);
+    --popover-foreground: var(--foreground);
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --border: var(--foreground);
+    --input: var(--foreground);
+
+    --primary: var(--yellow);
+    --primary-foreground: var(--foreground);
+
+    --accent: var(--blue);
+    --accent-foreground: var(--background);
+
+    --destructive: var(--red);
+    --destructive-foreground: var(--foreground);
+
+    --ring: var(--blue);
+
+    --radius: 0.5em;
+
+    --font-sans: Inter;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1 'calt' 1;
+  }
+}

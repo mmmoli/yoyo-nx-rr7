@@ -10,6 +10,7 @@ import {
 import type { MetaFunction, LinksFunction } from 'react-router';
 import type { Route } from '../.react-router/types/app/+types/nx-welcome';
 import { linguiServer, localeCookie } from './shared/i18n/lingui.server';
+import '@repo/shared-design-system/lib/globals.css';
 
 export const meta: MetaFunction = () => [
   {
