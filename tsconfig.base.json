@@ -16,14 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@repo/lingui.config": ["./lingui.config"],
-      "@repo/service-i18n": ["libs/service-i18n/src/index.ts"],
+      "@repo/service-i18n/*": ["libs/service-i18n/src/lib/*"],
       "@repo/shared-design-system/*": ["libs/shared-design-system/src/*"],
-      "@yoyo-nx-rr7/module-projects-core": [
-        "libs/module-projects-core/src/index.ts"
-      ],
-      "@yoyo-nx-rr7/module-projects-ui": [
-        "libs/module-projects-ui/src/index.ts"
-      ],
+      "@repo/module-projects-core": ["libs/module-projects-core/src/index.ts"],
+      "@repo/module-projects-ui": ["libs/module-projects-ui/src/index.ts"],
       "~/*": ["./libs/shared-design-system/src/lib/*"]
     }
   },

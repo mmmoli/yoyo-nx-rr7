@@ -1,7 +1,7 @@
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
 import { linguiServer } from './shared/i18n/lingui.server';
-import { loadCatalog } from './shared/i18n/lingui';
+import { loadCatalog } from '@repo/service-i18n/lingui';
 
 /**
  * By default, Remix will handle generating the HTTP Response for you.

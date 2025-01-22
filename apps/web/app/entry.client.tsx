@@ -7,7 +7,7 @@
 import { i18n } from '@lingui/core';
 import { detect, fromHtmlTag } from '@lingui/detect-locale';
 import { I18nProvider } from '@lingui/react';
-import { loadCatalog } from './shared/i18n/lingui';
+import { loadCatalog } from '@repo/service-i18n/lingui';
 import { HydratedRouter } from 'react-router/dom';
 import { startTransition, StrictMode } from 'react';
 import { hydrateRoot } from 'react-dom/client';

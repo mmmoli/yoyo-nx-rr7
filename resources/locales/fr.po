@@ -13,6 +13,14 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: apps/web/app/nx-welcome.tsx:436
+#: apps/web/app/nx-welcome.tsx:28
 msgid "Hello there, Welcome {title} 👋"
 msgstr "Bonjour, bienvenue {title} 👋"
+
+#: apps/web/app/nx-welcome.tsx:15
+msgid "Please wait"
+msgstr "S'il vous plaît, attendez"
+
+#: libs/module-projects-ui/src/widgets/project-details/ui/project-details-widget.tsx:8
+msgid "Project Details"
+msgstr "Détails du projet"

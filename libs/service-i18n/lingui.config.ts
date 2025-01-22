@@ -4,7 +4,7 @@ const config: LinguiConfig = {
   fallbackLocales: {
     default: 'en',
   },
-  locales: ['en', 'fr'],
+  locales: ['en', 'fr', 'th'],
   catalogs: [
     {
       path: '<rootDir>/resources/locales/{locale}',
