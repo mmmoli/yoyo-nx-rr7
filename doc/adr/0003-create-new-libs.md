@@ -12,7 +12,7 @@ It's always impossible to remember this crap.
 ### Is react involved?
 
 ```
-nx g @nx/react:library module-projects-ui --directory libs/module-projects-ui --bundler none
+nx g @nx/react:library module-projects-ui --directory libs/module-projects-ui --bundler none --tags scope:ui
 nx g @nx/react:setup-tailwind --project=module-projects-ui
 ```
 
@@ -21,7 +21,7 @@ Then add the preset…
 ### Pure JS?
 
 ```
-nx g @nx/js:library module-projects-core --directory libs/module-projects-core --bundler none
+nx g @nx/js:library module-projects-core --directory libs/module-projects-core --bundler none --tags scope:core
 ```
 
 

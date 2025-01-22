@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared-design-system/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:shared"],
   "// targets": "to see all targets run: nx show project shared-design-system --web",
   "targets": {
     "ui:add": {
