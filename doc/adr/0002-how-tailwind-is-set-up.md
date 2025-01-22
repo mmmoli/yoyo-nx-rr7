@@ -1,4 +1,4 @@
-# 2. how tailwind is set up
+# 2. How Tailwind is Set up
 
 Date: 2025-01-22
 
