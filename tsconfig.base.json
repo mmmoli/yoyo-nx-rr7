@@ -16,10 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@repo/lingui.config": ["./lingui.config"],
-      "@repo/service-i18n/*": ["libs/service-i18n/src/lib/*"],
-      "@repo/shared-design-system/*": ["libs/shared-design-system/src/*"],
       "@repo/module-projects-core": ["libs/module-projects-core/src/index.ts"],
       "@repo/module-projects-ui": ["libs/module-projects-ui/src/index.ts"],
+      "@repo/service-i18n/*": ["libs/service-i18n/src/lib/*"],
+      "@repo/shared-design-system/*": ["libs/shared-design-system/src/*"],
       "~/*": ["./libs/shared-design-system/src/lib/*"]
     }
   },

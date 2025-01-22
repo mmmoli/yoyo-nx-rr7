@@ -5,5 +5,5 @@ export interface ProjectEntityProps {
 }
 
 export const ProjectEntity: FC<ProjectEntityProps> = ({ children }) => {
-  return <div className="p-2 border-2 border-red-200">{children}</div>;
+  return <div className="p-2 border-2 border-destructive">{children}</div>;
 };

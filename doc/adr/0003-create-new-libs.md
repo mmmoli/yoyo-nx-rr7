@@ -13,7 +13,10 @@ It's always impossible to remember this crap.
 
 ```
 nx g @nx/react:library module-projects-ui --directory libs/module-projects-ui --bundler none
+nx g @nx/react:setup-tailwind --project=module-projects-ui
 ```
+
+Then add the preset…
 
 ### Pure JS?
 

@@ -27,3 +27,7 @@ This wasn't happy. I had to create a postcss.config file with the `.cjs` extensi
 It allow accepts import paths in `components.json`. If you put paths in, it breaks everything.
 
 This means you have to install components manually.
+
+### Tailwind config and preset in every lib
+
+It's the only way to pull in the design-system variables.
